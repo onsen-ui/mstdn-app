@@ -1,0 +1,21 @@
+{
+  "name": "mstdn-app",
+  "description": "webapp for mstdn.jp",
+  "main": "app.js",
+  "authors": [
+    "onsen"
+  ],
+  "license": "",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jade-bootstrap": "^1.1.0"
+  }
+}

@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+
+const app = require('../');
+const http = require('http');
+
+const port = app.get('port');
+const server = http.createServer(app);
+server.listen(port);
