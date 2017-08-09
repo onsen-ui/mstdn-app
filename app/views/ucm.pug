@@ -5,25 +5,28 @@ block title
   title ♨ | うちまガチャ
 
 append styles
-  link(href='/css/navbar-fixed-top.css', rel='stylesheet')
-  link(
-    rel='stylesheet'
-    href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css'
-  )
-    
+
 block body
   +navbar('ucm')
-  .container
-    .jumbotron
-      h1 うちまガチャ
-      p うんこちんこまんこ
-      form(action='/ucm/post', method='post')
-        .form-group
-          +visibility-select('visibility', visibility)
-          .form-group
-            button.btn.btn-lg.btn-primary(type='submit', name='num', value='1') 1回ガチャ
-            button.btn.btn-lg.btn-warning(type='submit', name='num', value='10') 10連ガチャ
-            button.btn.btn-lg.btn-danger(type='submit', name='num', value='40') 40連ガチャ
+  section.hero.is-primary.is-bold
+    .hero-body
+      .columns
+        .column.is-offset-1.is-5
+          h1.title.is-1 うちまガチャ
+          h2.subtitle.is-2 うんこちんこまんこ
+          form(action='/ucm/post', method='post')
+            .field
+              p.control
+                +visibility-select('visibility', visibility)
+            .field.is-grouped
+              p.control
+                button.button.is-large.is-info(type='submit', name='num', value='1') 1回ガチャ
+              p.control
+                button.button.is-large.is-warning(type='submit', name='num', value='10') 10連ガチャ
+              p.control
+                button.button.is-large.is-danger(type='submit', name='num', value='40') 40連ガチャ
+        .column.is-half
+          figure.image.is-square
+            img(src='/images/onsen.png')
 
 append scripts
-  script(src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js')

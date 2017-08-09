@@ -4,23 +4,21 @@
     penisis: '創性器',
     oooo: 'オ゛ォ゛ッ゛オ゛ォ゛ッ゛'
   };
-  
+
 mixin navbar(thisUrl)
-  nav.navbar.navbar-inverse.navbar-fixed-top
-    .container
-      .navbar-header
-        button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
-          span.sr-only Toggle navigation
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
-        a.navbar-brand(href='/') ♨
-      #navbar.collapse.navbar-collapse
-        ul.nav.navbar-nav
-          each name, url in pages
-            if url == thisUrl
-              li.active
-                a(href=`/${url}`)= name
-            else
-              li
-                a(href=`/${url}`)= name
+  section.hero
+    .hero-head
+      header.nav
+        .container
+          .nav-left
+            a.nav-item(href='/') ♨
+          span#nav-toggle.nav-toggle
+            span
+            span
+            span
+          #nav-menu.nav-menu.nav-right
+            each name, url in pages
+              if url == thisUrl
+                a.nav-item.is-tab.is-active(href=`/${url}`)= name
+              else
+                a.nav-item.is-tab(href=`/${url}`)= name

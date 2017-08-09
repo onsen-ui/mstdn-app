@@ -1,5 +1,6 @@
 mixin visibility-select(name, visibility)
   - const list = ['public', 'unlisted', 'private'];
-  select.selectpicker(name=`${name}`)
-    each vis in list
-      option(selected= vis==visibility)= vis
+  span.select
+    select(name=`${name}`)
+      each vis in list
+        option(selected= vis==visibility)= vis

@@ -15,7 +15,5 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "^3.3.7",
-    "jade-bootstrap": "^1.1.0"
   }
 }
